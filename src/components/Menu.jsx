@@ -1,3 +1,5 @@
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Menu(){
     return(
@@ -9,3 +11,15 @@ export default function Menu(){
         </Container>
     )
 }
+
+
+const Container = styled.div`
+display: flex;
+height: 100%;
+align-items: center;
+gap: 4px;
+
+a{
+    text-decoration: none;
+}
+`

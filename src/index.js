@@ -1,4 +1,4 @@
 import { render } from "react-dom";
-import App from "./App.js";
+import App2 from "./App2.js";
 
-render(<App />, document.querySelector(".root"));
+render(<App2 />, document.querySelector(".root"));

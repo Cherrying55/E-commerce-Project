@@ -1,7 +1,9 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+/* import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import styled from "styled-components";
 
 
+const AuthProvider = styled.div``;
 
 export default function App(){
 
@@ -19,4 +21,4 @@ export default function App(){
             </BrowserRouter>
         </AuthProvider>
     )
-}
+} */
