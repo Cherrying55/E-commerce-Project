@@ -6,6 +6,7 @@ display: flex;
 flex-direction: column;
 width: 90%;
 gap: 4px;
+margin-top: 40px;
 
 input{
     width: 100%;

@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import AuthContext from "../contexts/AuthContext.js";
+// import AuthContext from "../contexts/AuthContext.js";
 import { useState, useContext } from "react";
 import SignForm from "../assets/SignForm.jsx";
 import styled from "styled-components";
 import { ThreeDots } from 'react-loader-spinner';
+import Header from "../components/Header.jsx";
+import Main from "../assets/Main.jsx";
+
 
 export default function SignUpPage(){
 
-    const { login } = useContext(AuthContext);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [dados, setDados] = useState({email: "", password: "", name: ""})
@@ -38,6 +40,7 @@ export default function SignUpPage(){
     return(
         <>
         <Header />
+        <Main>
         <SignForm onSubmit={fazercadastro}>
             <input type="text" name="name" placeholder="Nome" onChange={alterardados} />
             <input type="email" name="email" placeholder="E-mail" onChange={alterardados} />
@@ -53,9 +56,11 @@ export default function SignUpPage(){
         <Link to="/sign-up">
             Não possui uma conta? Cadastre-se
         </Link>
+        </Main>
         </>
 
     )
 
 }
 
+//const { login } = useContext(AuthContext);

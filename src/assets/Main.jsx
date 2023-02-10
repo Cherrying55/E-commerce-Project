@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import SignForm from "./SignForm.jsx";
+
 
 const Main = styled.div`
 margin-top: 90px;
