@@ -82,6 +82,9 @@ const GlobalStyle = createGlobalStyle`
         top: 0;
         z-index: 1000;
         background-color: white;
+        border-top: 0.5px solid gray;
+        border-bottom: 0.5px solid gray;
+        margin-top: 10px;
     }
 
     header ion-icon{

@@ -5,6 +5,8 @@ import SignUpPage from "./pages/SignUpPage.jsx";
 import ProductsPage from "./pages/ProductsPage";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
+import OrderPage from "./pages/OrderPage";
 
 export default function App2(){
     return(
@@ -17,6 +19,8 @@ export default function App2(){
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/purchase" element={<OrderPage />} />
         </Routes>
         </BrowserRouter>
         </>
