@@ -11,3 +11,10 @@ export default function BestSelling(props){
         </Container>
     )
 }
+
+const Container = styled.div`
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+gap: 2%;
+`

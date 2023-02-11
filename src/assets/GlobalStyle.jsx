@@ -80,6 +80,8 @@ const GlobalStyle = createGlobalStyle`
         padding-right: 20px;
         position: fixed;
         top: 0;
+        z-index: 1000;
+        background-color: white;
     }
 
     header ion-icon{
