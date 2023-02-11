@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import ProductsPage from "./pages/ProductsPage";
 import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
 
 export default function App2(){
     return(
@@ -15,6 +16,7 @@ export default function App2(){
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/product" element={<ProductPage />} />
         </Routes>
         </BrowserRouter>
         </>
