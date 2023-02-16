@@ -2,8 +2,7 @@
 
 export default function SuccessPage(){
 
-    //usará o contexto cart mas potencialmente terá um boolean de ordered nele.
-    //alguma forma de lidar com codigo do pedido e mostrar ele na tela, provavelmente em ordem vai postar em requests e resposta vai ser o token, seta isso em cartcontext
+    //link é /code/sucess, code vem do params. dai confere se tem um no server assim. 
 
     return(
         <Main>
