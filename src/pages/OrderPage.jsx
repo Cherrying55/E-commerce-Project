@@ -17,7 +17,7 @@ export default function OrderPage(){
         {
             !paymentMethod.defined? <PaymentMethods setPaymentMethod={setPaymentMethod} /> : <PaymentForm type={paymentMethod.method} />
         }
-        <PaymentForm type={paymentMethod.method} />
+        <PaymentForm />
         </Main>
         </>
     )

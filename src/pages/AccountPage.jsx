@@ -5,7 +5,8 @@ export default function AccountPage(){
 
    return(
     <Main>
-    
+       <Aboutyou name={name} user={user} token={token} />
+       <PreviousPurchases user={user} />
     </Main>
    )
 }
