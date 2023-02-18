@@ -21,5 +21,7 @@ gap: 4px;
 
 a{
     text-decoration: none;
+    color: white;
+    background-color: #DB5B6E
 }
 `

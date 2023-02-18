@@ -22,11 +22,12 @@ export default function Header(){
 }
 
 const Logo = styled.h1`
-color: black;
+color: white;
 font-weight: bold;
 font-size: 32px;
 height: 100%;
 display: flex;
 align-items: center;
+background-color: #DB5B6E
 `
 

@@ -70,9 +70,10 @@ const GlobalStyle = createGlobalStyle`
     *{
         box-sizing: border-box;
         font-family: 'Roboto';
+        background-color: #F7E1D7;
     }
     header{
-        height: 90px;
+        height: 70px;
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -81,14 +82,13 @@ const GlobalStyle = createGlobalStyle`
         position: fixed;
         top: 0;
         z-index: 1000;
-        background-color: white;
-        border-top: 0.5px solid gray;
-        border-bottom: 0.5px solid gray;
-        margin-top: 10px;
+        background-color: #DB5B6E
+        
     }
 
     header ion-icon{
         font-size: 24px;
+        background-color: #DB5B6E
     }
 
     header div{
@@ -96,6 +96,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         align-items: center;
         gap: 5px;
+        background-color: #DB5B6E
     }
 `
 
