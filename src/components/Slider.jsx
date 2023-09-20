@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 export default function Slider(){
 
+    const carousel = []
+
     return(
         <StyledCarousel infiniteLoop={true}>
             {carousel.map(
@@ -19,3 +21,7 @@ export default function Slider(){
         </StyledCarousel>
     )
 }
+
+const StyledCarousel = styled(Carousel)`
+
+`

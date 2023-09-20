@@ -11,3 +11,5 @@ export default function BestSelling(props){
         </Container>
     )
 }
+
+const Container = styled.div``

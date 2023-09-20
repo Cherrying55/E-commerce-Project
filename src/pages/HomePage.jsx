@@ -1,13 +1,13 @@
 import Header from "../components/Header";
 import styled from "styled-components";
 import Slider from "../components/Slider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import BestSelling from "../components/BestSelling"
 
 export default function HomePage(){
 
     const [bestselling, setBestSelling] = useState([]);
     
-    useEffect(setbestselling, []);
 
     return(
         <>
@@ -20,3 +20,7 @@ export default function HomePage(){
         </>
     )
 }
+
+const Container = styled.div`
+
+`

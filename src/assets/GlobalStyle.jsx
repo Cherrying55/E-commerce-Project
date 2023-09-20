@@ -75,11 +75,16 @@ const GlobalStyle = createGlobalStyle`
         height: 90px;
         display: flex;
         width: 100%;
-        justify-content: space-between;
         padding-left: 20px;
         padding-right: 20px;
         position: fixed;
         top: 0;
+    }
+
+    header hr{
+        height: 0.5px;
+        color: gray;
+        width: 100%;
     }
 
     header ion-icon{

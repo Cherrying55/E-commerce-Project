@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { ThreeDots } from 'react-loader-spinner';
 import Header from "../components/Header.jsx";
 import Main from "../assets/Main.jsx";
+import RegisterForm from "../assets/RegisterForm.jsx";
 
 export default function LoginPage(){
 
@@ -44,6 +45,8 @@ export default function LoginPage(){
         <Header />
         <Main>
         <SignForm onSubmit={fazerlogin}>
+            <h1>Login</h1>
+        <hr></hr>
             <input type="email" name="email" placeholder="E-mail" onChange={alterardados} />
             <input type="password" name="password" placeholder="Senha" onChange={alterardados}/>
             <button type="submit" disabled={loading}>
@@ -53,10 +56,15 @@ export default function LoginPage(){
               : "ENTRAR"
                }
             </button>
+           
         </SignForm>
-        <Link to="/sign-up">
-            Não possui uma conta? Cadastre-se
-        </Link>
+        <RegisterForm>
+            <h1>Create an account</h1>
+            <hr></hr>
+            <h2>Streamline checkout and register today for free!<br /><br />Create an account and get a coupon</h2>
+<button>CREATE ACCOUNT</button>
+        </RegisterForm>
+        
         </Main>
         </>
 

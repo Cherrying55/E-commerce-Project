@@ -18,7 +18,7 @@ display: flex;
 height: 100%;
 align-items: center;
 gap: 4px;
-
+width: 33%;
 a{
     text-decoration: none;
 }

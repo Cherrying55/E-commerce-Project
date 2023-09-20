@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-const SignForm = styled.form`
+const RegisterForm = styled.form`
 display: flex;
 flex-direction: column;
 width: 50%;
@@ -9,26 +9,19 @@ width: 50%;
 h1{
     font-size: 25px;
     color: black;
-    margin: 0;
 }
 
-input{
-    width: 100%;
-    border: 0.5px solid black;
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-left: 10px;
+h2{
+    font-size: 20px;
     color: black;
-    background: white;
     margin-bottom: 20px;
 }
 
 button{
-    background: #e6e2e1;
+    background: #e6e2e1;;
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 50px;
     color: black;
     border: none;
     font-weight: bold;
@@ -38,4 +31,4 @@ button{
 }
 `
 
-export default SignForm
+export default RegisterForm

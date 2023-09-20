@@ -16,6 +16,7 @@ export default function Header(){
                 <ion-icon name="person" onClick={() => {if(auth.token){navigate("/user")}else{navigate("/login")}}}></ion-icon>
                 <ion-icon name="heart" onClick={() => navigate("/wishlist")}></ion-icon>
             </div>
+            <hr></hr>
         </header>
     )
 
@@ -28,5 +29,8 @@ font-size: 32px;
 height: 100%;
 display: flex;
 align-items: center;
+margin: 0 auto;
+width: 33%;
+text-align: center;
 `
 
