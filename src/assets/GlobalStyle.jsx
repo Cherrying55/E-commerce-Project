@@ -78,7 +78,10 @@ const GlobalStyle = createGlobalStyle`
         padding-left: 20px;
         padding-right: 20px;
         position: fixed;
+        border-bottom: 1px solid #c0c0c0;
         top: 0;
+        background: white;
+        
     }
 
     header hr{

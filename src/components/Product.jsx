@@ -9,12 +9,43 @@ export default function Product(props){
     return(
         <ProductContainer to={`/products/${props.code}`}>
             <img src={props.img} />
-            <h2>{p.code}</h2>
-            <h3>{p.price}</h3>
+            <h2>{props.code}</h2>
+            <h3>{props.price}</h3>
             <div>
-                {wishlist ? <ion-icon heart onClick={postwishlist} /> : <ion-icon heartunfilled onClick={postwishlist} />}
-                {cart ? <ion-icon cart onClick={postcart} /> : <ion-icon cartunfilled onClick={postcart} />}
+                {wishlist ? <ion-icon name="heart"  /> : <ion-icon name="heart-outline"/>}
+                {cart ? <ion-icon name="cart" /> : <ion-icon name="cart-outline" />}
             </div>
         </ProductContainer>
     )
 }
+
+const ProductContainer = styled.div`
+height: 336px;
+width: 194px;
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+img{
+    height: 240px;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 18px;
+}
+
+div{
+    display: flex;
+    gap: 4px;
+    
+}
+
+ion-icon{
+    font-size: 20px;
+}
+`

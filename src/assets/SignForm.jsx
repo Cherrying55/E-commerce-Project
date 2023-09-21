@@ -12,7 +12,15 @@ h1{
     margin: 0;
 }
 
-input{
+label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 16px;
+    gap: 10px;
+}
+label input{
     width: 100%;
     border: 0.5px solid black;
     display: flex;

@@ -4,9 +4,8 @@ const Main = styled.div`
 margin-top: 120px;
 width: 100%;
 display: flex;
-padding-left: 6%;
-padding-right: 6%;
-gap: 4%;
+flex-direction: column;
+align-items: center;
 height: calc(80vh - 120px);
 padding-top: 10vh;
 

@@ -16,7 +16,6 @@ export default function Header(){
                 <ion-icon name="person" onClick={() => {if(auth.token){navigate("/user")}else{navigate("/login")}}}></ion-icon>
                 <ion-icon name="heart" onClick={() => navigate("/wishlist")}></ion-icon>
             </div>
-            <hr></hr>
         </header>
     )
 

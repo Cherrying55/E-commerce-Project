@@ -1,21 +1,19 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
+import styled from "styled-components";
+import { useEffect, useState } from "react";
+import BestSelling from "../components/BestSelling"
+import { useParams } from "react-router-dom";
 
 export default function ProductsPage(){
 
-    const params = useParams();
+    const [bestselling, setBestSelling] = useState([]);
+    const { category } = useParams()
 
     return(
         <>
-        <Header />
-        <Container>
-            <ProductsContainer>
-                {
-                    products.map(
-                        (p) => <Product code={p.code} price={p.price} img={p.img} />
-                    )
-                }
-            </ProductsContainer>
-        </Container>
+            <Header />
+            <BestSelling name="Skirts" />
         </>
     )
 }
+
