@@ -11,7 +11,7 @@ export default function HomePage(){
     return(
         <>
             <Header />
-            <BestSelling text="All products" />
+            <BestSelling name="All products" />
         </>
     )
 }

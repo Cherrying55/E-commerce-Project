@@ -47,9 +47,10 @@ h1{
 }
 
 hr{
-    height: 0.5px;
-    color: gray;
     width: 100%;
+    background: #c0c0c0;
+    height: 1px;
+    border: none;
 }
 
 
