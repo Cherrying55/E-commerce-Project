@@ -25,7 +25,7 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 <hr>
 
 <br>
-<h2>Features</h2>
+<h1>Features</h1>
 <h3>Accounts</h3>
 <ul>
   <li>User account system with access tokenization on every relevant page</li>
