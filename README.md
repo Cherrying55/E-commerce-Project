@@ -15,13 +15,11 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 
 <h1>Technologies used</h1>
 <ul>
-  <li>
-    ReactJS
-    Styled-Components
-    React-Helmet
-    Create-React-App
-  </li>
-  
+  <li>ReactJS</li>
+  <li>Styled Components</li>
+  <li>Create React App</li>
+  <li>React Helmet</li>
+  <li>React Router</li>
 </ul>
 
 <hr>
@@ -72,6 +70,14 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 <ul>
   <li>Content security policy to prevent XSS is implemented in the main document head tag</li>
   <li>This website follows OWASP main guidelines</li>
+</ul>
+<br>
+<h2>Coming soon</h2>
+<ul>
+  <li>Color and size selection in the product page</li>
+  <li>Service worker for cached content</li>
+  <li>Redux</li>
+  <li>NextJS sitemap implementation</li>
 </ul>
 
 
