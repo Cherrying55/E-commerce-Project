@@ -5,6 +5,8 @@ import LoginPage from "./pages/LoginPage";
 import ProductsPage from "./pages/ProductsPage";
 import SignUpPage from "./pages/SignUpPage"
 import CartPage from "./pages/CartPage/CartPage";
+import { AccountPage } from "./pages/AccountPage";
+import { WishListPage } from "./pages/WishListPage/WishListPage";
 
 export default function App2(){
     return(
@@ -17,6 +19,8 @@ export default function App2(){
         <Route path="/home" element={<HomePage />} />
         <Route path="/products/:category" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/membership" element={<AccountPage />} />
+        <Route path="/wishlist" element={<WishListPage />} />
         </Routes>
         </BrowserRouter>
         </>
