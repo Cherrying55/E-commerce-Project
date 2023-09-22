@@ -81,6 +81,7 @@ const GlobalStyle = createGlobalStyle`
         border-bottom: 1px solid #c0c0c0;
         top: 0;
         background: white;
+        z-index: 3;
         
     }
 
