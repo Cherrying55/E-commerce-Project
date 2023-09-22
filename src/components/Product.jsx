@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Product(props){
 
     const [wishlist, setWishlist] = useState(false);
     const [cart, setCart] = useState(false);
+    const navigate = useNavigate()
 
     return(
-        <ProductContainer to={`/products/${props.code}`}>
+        <ProductContainer onClick={() => navigate(`/product/1`)}>
             <img src={props.img} />
             <h2>{props.code}</h2>
             <h3>{props.price}</h3>

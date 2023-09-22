@@ -13,7 +13,7 @@ export default function Header(){
             <Logo>STARR</Logo>
             <div>
                 <ion-icon name="cart-outline" onClick={() => navigate("/cart")}></ion-icon>
-                <ion-icon name="person" onClick={() => {if(auth.token){navigate("/user")}else{navigate("/login")}}}></ion-icon>
+                <ion-icon name="person" onClick={() => {if(auth.token){navigate("/membership")}else{navigate("/login")}}}></ion-icon>
                 <ion-icon name="heart" onClick={() => navigate("/wishlist")}></ion-icon>
             </div>
         </header>

@@ -7,6 +7,7 @@ import SignUpPage from "./pages/SignUpPage"
 import CartPage from "./pages/CartPage/CartPage";
 import { AccountPage } from "./pages/AccountPage";
 import { WishListPage } from "./pages/WishListPage/WishListPage";
+import { ProductPage } from "./pages/ProductPage/ProductPage";
 
 export default function App2(){
     return(
@@ -21,6 +22,7 @@ export default function App2(){
         <Route path="/cart" element={<CartPage />} />
         <Route path="/membership" element={<AccountPage />} />
         <Route path="/wishlist" element={<WishListPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
         </BrowserRouter>
         </>
