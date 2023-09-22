@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -101,6 +101,6 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
         gap: 5px;
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

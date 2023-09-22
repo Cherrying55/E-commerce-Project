@@ -1,80 +1,77 @@
-import styled from "styled-components"
-import Header from "../../components/Header"
-import { Summary } from "./components/Summary"
-import { CartItem } from "./components/CartItem"
-import { Breadcrumb } from "../../components/Breadcrumb"
+import styled from "styled-components";
+import Header from "../../components/Header";
+import { Summary } from "./components/Summary";
+import { CartItem } from "./components/CartItem";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
-export default function CartPage(){
-
-    return(
-        <>
-        <Header />
-        <Container>
+export default function CartPage() {
+  return (
+    <>
+      <Header />
+      <Container>
         <div className="top">
-            <Breadcrumb />
-        <section>
-            
-        <h1>Shopping cart</h1>
-        <hr></hr>
-        </section>
+          <Breadcrumb />
+          <section>
+            <h1>Shopping cart</h1>
+            <hr></hr>
+          </section>
         </div>
         <main>
-            <CartItemsContainer>
-                <CartItem />
-                <CartItem />
-                <CartItem />
-                <CartItem />
-            </CartItemsContainer>
-            <Summary item_amount={1} subtotal={150} shipping={25} tax={30} />
-            </main>
-        </Container>
-        </>
-    )
+          <CartItemsContainer>
+            <CartItem />
+            <CartItem />
+            <CartItem />
+            <CartItem />
+          </CartItemsContainer>
+          <Summary item_amount={1} subtotal={150} shipping={25} tax={30} />
+        </main>
+      </Container>
+    </>
+  );
 }
 
 const Container = styled.div`
-margin-top: 60px;
-padding-left: 6%;
-padding-right: 6%;
-width: 100%;
-padding-top: 10vh;
+  margin-top: 60px;
+  padding-left: 6%;
+  padding-right: 6%;
+  width: 100%;
+  padding-top: 10vh;
 
-.top{
+  .top {
     width: 100%;
-}
+  }
 
-main{
+  main {
     width: 100%;
     display: flex;
-flex-wrap: wrap;
-gap: 80px;
-}
+    flex-wrap: wrap;
+    gap: 80px;
+  }
 
-
-section{
+  section {
     width: 100%;
-    > h1{
-        font-size: 26px;
-        width: 100%;
-        font-weight: bold;
-        margin-bottom: 20px;
+    > h1 {
+      font-size: 26px;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
-    
-    hr{
-        width: 100%;
-        background: #c0c0c0;
-        height: 1px;
-        border: none;
+
+    hr {
+      width: 100%;
+      background: #c0c0c0;
+      height: 1px;
+      border: none;
     }
     margin-bottom: 40px;
-}
-`
+  }
+`;
 
 const CartItemsContainer = styled.div`
-width: 60%;
-gap: 4%;
-flex-wrap: wrap;
-`
+  width: 60%;
+  gap: 4%;
+  flex-wrap: wrap;
+`;
 
 /*
  <h1>Shopping cart</h1>

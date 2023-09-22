@@ -1,22 +1,21 @@
- import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import styled from "styled-components";
 import HomePage from "./pages/HomePage";
 const AuthProvider = styled.div``;
 
-export default function App(){
-
-    return(
-        <AuthProvider>
-            <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/login" element={<LoginPage />} />
-            </Routes>
-            </BrowserRouter>
-        </AuthProvider>
-    )
-} 
+export default function App() {
+  return (
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
+}
 
 /*
 

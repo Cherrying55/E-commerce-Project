@@ -1,25 +1,27 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export function Breadcrumb(props){
-    return(
-        <BreadcrumbContainer>
-        <li><a>Home / </a></li>
-        <li><a> Products</a></li>
-        </BreadcrumbContainer>
-    )
+export function Breadcrumb(props) {
+  return (
+    <BreadcrumbContainer>
+      <li>
+        <a>Home / </a>
+      </li>
+      <li>
+        <a> Products</a>
+      </li>
+    </BreadcrumbContainer>
+  );
 }
 
 const BreadcrumbContainer = styled.ol`
+  color: black;
+  display: flex;
+  margin-bottom: 8px;
 
-color: black;
-display: flex;
-margin-bottom: 8px;
-
-li a{
+  li a {
     font-size: 15px;
-
-}
-`
+  }
+`;
 
 /*
 {props.list.map(
