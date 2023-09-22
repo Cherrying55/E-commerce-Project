@@ -24,8 +24,6 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 
 <hr>
 
-<h1>Functionalities</h1>
-
 <br>
 <h2>Features</h2>
 <h3>Accounts</h3>
