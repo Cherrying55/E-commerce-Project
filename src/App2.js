@@ -8,10 +8,11 @@ import CartPage from "./pages/CartPage/CartPage";
 import { AccountPage } from "./pages/AccountPage";
 import { WishListPage } from "./pages/WishListPage/WishListPage";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
+import { HelmetProvider } from "react-helmet-async";
 
 export default function App2() {
   return (
-    <>
+    <HelmetProvider>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -25,6 +26,6 @@ export default function App2() {
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </HelmetProvider>
   );
 }

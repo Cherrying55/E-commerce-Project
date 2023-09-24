@@ -4,10 +4,16 @@ import { Breadcrumb } from "../../components/Breadcrumb";
 import { ProductView } from "./components/ProductView";
 import { Summary } from "../CartPage/components/Summary";
 import { ProductInfo } from "./components/ProductInfo";
+import { Helmet } from "react-helmet-async";
 
 export function ProductPage() {
   return (
     <>
+    <Helmet>
+      <title>Product name</title>
+      <meta name="description" content="Starr's most recognizable shoe since its debut in the '90s, the moccasin is reimagined in diverse designs, from logo fabric loafers to leather moccasins." />
+      <link rel="canonical" href="/product/productname" />
+    </Helmet>
       <Header />
       <Container>
         <main>

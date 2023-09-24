@@ -2,12 +2,18 @@ import Header from "../components/Header";
 import { Breadcrumb } from "react-bootstrap";
 import styled from "styled-components";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("accountinformation");
 
   return (
     <>
+    <Helmet>
+      <title>Product name</title>
+      <meta name="description" content="Check and change your account information at Starr." />
+      <link rel="canonical" href="/membership" />
+    </Helmet>
       <Header />
       <Container>
         <div className="top">

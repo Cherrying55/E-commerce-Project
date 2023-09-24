@@ -2,10 +2,16 @@ import styled from "styled-components";
 import Header from "../../components/Header";
 import { Breadcrumb } from "../../components/Breadcrumb";
 import { WishListItem } from "./components/WishListItem";
+import { Helmet } from "react-helmet-async";
 
 export function WishListPage() {
   return (
     <>
+    <Helmet>
+      <title>Product name</title>
+      <meta name="description" content="Check the items in your wishlist at Starr" />
+      <link rel="canonical" href="/wishlist" />
+    </Helmet>
       <Header />
       <Container>
         <div className="top">

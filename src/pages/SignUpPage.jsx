@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { ThreeDots } from "react-loader-spinner";
 import Header from "../components/Header.jsx";
 import Main from "../assets/Main.jsx";
+import { Helmet } from "react-helmet-async";
 
 export default function SignUpPage() {
   //const { login } = useContext(AuthContext);
@@ -36,6 +37,11 @@ export default function SignUpPage() {
 
   return (
     <>
+    <Helmet>
+      <title>Product name</title>
+      <meta name="description" content="Create an account now at Starr's online store" />
+      <link rel="canonical" href="/sign-up" />
+    </Helmet>
       <Header />
       <Main>
         <SignForm onSubmit={fazercadastro}>

@@ -7,6 +7,7 @@ import { ThreeDots } from "react-loader-spinner";
 import Header from "../components/Header.jsx";
 import RegisterForm from "../assets/RegisterForm.jsx";
 import Product from "../components/Product.jsx";
+import { Helmet } from "react-helmet-async";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -40,6 +41,11 @@ export default function LoginPage() {
 
   return (
     <>
+    <Helmet>
+      <title>Product name</title>
+      <meta name="description" content="Login at Starr's online store" />
+      <link rel="canonical" href="/sign-in" />
+    </Helmet>
       <Header />
       <Main>
         <SignForm onSubmit={fazerlogin}>

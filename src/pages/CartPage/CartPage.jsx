@@ -3,10 +3,16 @@ import Header from "../../components/Header";
 import { Summary } from "./components/Summary";
 import { CartItem } from "./components/CartItem";
 import { Breadcrumb } from "../../components/Breadcrumb";
+import { Helmet } from "react-helmet-async";
 
 export default function CartPage() {
   return (
     <>
+    <Helmet>
+      <title>Shopping cart</title>
+      <meta name="description" content="Check the items in your cart at Starr" />
+      <link rel="canonical" href="/cart" />
+    </Helmet>
       <Header />
       <Container>
         <div className="top">
