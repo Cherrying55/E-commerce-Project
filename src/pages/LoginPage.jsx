@@ -42,7 +42,7 @@ export default function LoginPage() {
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>Sign in</title>
       <meta name="description" content="Login at Starr's online store" />
       <link rel="canonical" href="/sign-in" />
     </Helmet>

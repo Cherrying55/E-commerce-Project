@@ -12,7 +12,7 @@ export default function ProductsPage() {
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>Product category</title>
       <meta name="description" content="Discover the latest range of designer women's clothing, shoes & accessories at STARR.com. Enjoy free shipping, returns & gift wrapping." />
       <link rel="canonical" href="/products/category" />
     </Helmet>

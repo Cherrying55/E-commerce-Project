@@ -8,7 +8,7 @@ export function WishListPage() {
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>Wishlist</title>
       <meta name="description" content="Check the items in your wishlist at Starr" />
       <link rel="canonical" href="/wishlist" />
     </Helmet>

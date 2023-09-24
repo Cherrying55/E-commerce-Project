@@ -2,16 +2,53 @@
    <xml version="1.0" encoding="UTF-8">
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>http://www.example.com/foo</loc>
+       <loc>https://starr-frontend.vercel.app/</loc>
        <lastmod>2021-06-01</lastmod>
      </url>
      <url>
-       <loc>http://www.example.com/foo</loc>
+       <loc>https://starr-frontend.vercel.app/sign-in</loc>
        <lastmod>2021-06-01</lastmod>
      </url>
      <url>
-       <loc>http://www.example.com/foo</loc>
+       <loc>https://starr-frontend.vercel.app/sign-up</loc>
        <lastmod>2021-06-01</lastmod>
      </url>
+     <url>
+       <loc>https://starr-frontend.vercel.app/membership</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+     <url>
+       <loc>https://starr-frontend.vercel.app/cart</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+     <url>
+       <loc>https://starr-frontend.vercel.app/wishlist</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+     <url>
+       <loc>https://starr-frontend.vercel.app/products/bags</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+          <url>
+       <loc>https://starr-frontend.vercel.app/products/tops</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+          <url>
+       <loc>https://starr-frontend.vercel.app/products/dresses</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+          <url>
+       <loc>https://starr-frontend.vercel.app/skirts</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+          <url>
+       <loc>https://starr-frontend.vercel.app/products/bags/2</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+          <url>
+       <loc>https://starr-frontend.vercel.app/products/dresses/1</loc>
+       <lastmod>2021-06-01</lastmod>
+     </url>
+     
    </urlset>
    </xml>

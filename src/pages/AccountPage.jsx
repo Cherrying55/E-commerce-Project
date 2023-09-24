@@ -3,14 +3,19 @@ import { Breadcrumb } from "react-bootstrap";
 import styled from "styled-components";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { CreditCard } from "../components/CreditCard";
+import { Address } from "../components/Address";
+import { Order } from "../components/Order";
 
 export function AccountPage() {
-  const [currentabout, setCurrentAbout] = useState("accountinformation");
+  const [currentabout, setCurrentAbout] = useState("creditcards");
+
+  
 
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>Account</title>
       <meta name="description" content="Check and change your account information at Starr." />
       <link rel="canonical" href="/membership" />
     </Helmet>
@@ -26,10 +31,10 @@ export function AccountPage() {
         <Content>
           <Options>
             <h1>Membership</h1>
-            <h2>Account Information</h2>
-            <h2>Credit Cards</h2>
-            <h2>Address Book</h2>
-            <h2>Purchase History</h2>
+            <h2 onClick={() => {setCurrentAbout("accountinformation")}}>Account Information</h2>
+            <h2 onClick={() => {setCurrentAbout("creditcards")}} >Credit Cards</h2>
+            <h2 onClick={() => {setCurrentAbout("addressbook")}}>Address Book</h2>
+            <h2 onClick={() => {setCurrentAbout("purchasehistory")}}>Purchase History</h2>
           </Options>
           <About>
             {currentabout === "accountinformation" ? (
@@ -49,25 +54,22 @@ export function AccountPage() {
               <>
                 <h1>Credit Cards</h1>
                 <hr></hr>
-                <h2>Email</h2>
-                <h3>email@email.com</h3>
-                <h2>Name</h2>
-                <h3>John Doe</h3>
-                <h2>Birthday</h2>
-                <h3>01/01/1990</h3>
+                <CreditCard />
+                <CreditCard />
               </>
-            ) : (
+            ) : ( currentabout === "addressbook" ?
               <>
                 <h1>Addresses</h1>
                 <hr></hr>
-                <h2>Email</h2>
-                <h3>email@email.com</h3>
-                <h2>Name</h2>
-                <h3>John Doe</h3>
-                <h2>Birthday</h2>
-                <h3>01/01/1990</h3>
+                <Address />
+                <Address />
               </>
-            )}
+            : <>
+            <h1>Purchase History</h1>
+            <hr></hr>
+            <Order />
+            <Order />
+          </>) }
           </About>
         </Content>
       </Container>

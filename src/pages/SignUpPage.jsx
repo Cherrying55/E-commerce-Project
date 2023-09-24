@@ -38,7 +38,7 @@ export default function SignUpPage() {
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>Create an account</title>
       <meta name="description" content="Create an account now at Starr's online store" />
       <link rel="canonical" href="/sign-up" />
     </Helmet>

@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
     <Helmet>
-      <title>Product name</title>
+      <title>STARR</title>
       <meta name="description" content="Shop at the official site of Starr. Discover the latest dresses, handbags, shoes and tops collections" />
       <link rel="canonical" href="/" />
     </Helmet>
