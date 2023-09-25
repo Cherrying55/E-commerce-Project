@@ -3,6 +3,8 @@
 Fully functional clothing store application with a shopping bag, a wishing list and account information. <br>
 Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 
+<img src="https://i.imgur.com/LjbFnEp.png" />
+
 <hr>
 
 <h1> Instructions </h1>
