@@ -10,6 +10,7 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 <h1> Instructions </h1>
 
 <ul>
+  <li>Install all dependencies using npm install</li>
   <li>Run npm run start in the bash</li>
 </ul>
 
