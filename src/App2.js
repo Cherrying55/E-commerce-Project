@@ -16,9 +16,9 @@ export default function App2() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/sign-in" element={<LoginPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/products/:category" element={<ProductsPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/membership" element={<AccountPage />} />
