@@ -6,13 +6,19 @@ import styled from "styled-components";
 import { ThreeDots } from "react-loader-spinner";
 import Header from "../components/Header.jsx";
 import RegisterForm from "../assets/RegisterForm.jsx";
-import Product from "../components/Product.jsx";
 import { Helmet } from "react-helmet-async";
+import { useSelector, useDispatch } from "react-redux";
+import { loginaction } from "../redux/user/user.actions.js";
 
 export default function LoginPage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [dados, setDados] = useState({ email: "", password: "" });
+  const dispatch = useDispatch();
+  let filter = useSelector(state => {
+    console.log('State: ', state);
+    return state.userReducer.currentUser;
+  });
 
   function alterardados(e) {
     let newobj = { ...dados };
@@ -20,17 +26,19 @@ export default function LoginPage() {
     setDados({ ...newobj });
   }
 
-  function login() {
-    console.log("a");
+  function logintest(e){
+    e.preventDefault()
+    dispatch(loginaction({currentUser: "a"}))
+    console.log(filter)
   }
 
-  function fazerlogin(e) {
+  function login(e) {
     setLoading(true);
     e.preventDefault();
     axios
-      .post("https://localhost:5000/sign-in", dados)
+      .post("https://localhost:5000/auth/sign-in", dados)
       .then((res) => {
-        login(res.data);
+        dispatch(loginaction(res.data));
         navigate("/");
       })
       .catch((err) => {
@@ -48,7 +56,7 @@ export default function LoginPage() {
     </Helmet>
       <Header />
       <Main>
-        <SignForm onSubmit={fazerlogin}>
+        <SignForm onSubmit={logintest}>
           <h1>Login</h1>
           <hr></hr>
           <label htmlFor="email">
