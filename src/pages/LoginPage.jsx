@@ -16,7 +16,6 @@ export default function LoginPage() {
   const [dados, setDados] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
   let filter = useSelector(state => {
-    console.log('State: ', state);
     return state.userReducer.currentUser;
   });
 
@@ -29,16 +28,17 @@ export default function LoginPage() {
   function logintest(e){
     e.preventDefault()
     dispatch(loginaction({currentUser: "a"}))
-    console.log(filter)
   }
 
   function login(e) {
     setLoading(true);
     e.preventDefault();
     axios
-      .post("https://localhost:5000/auth/sign-in", dados)
+      .post("http://localhost:4000/auth/sign-in", dados)
       .then((res) => {
-        dispatch(loginaction(res.data));
+        let token = res.data;
+        dispatch(loginaction({currentUser: token}))
+        console.log(filter);
         navigate("/");
       })
       .catch((err) => {
@@ -56,7 +56,7 @@ export default function LoginPage() {
     </Helmet>
       <Header />
       <Main>
-        <SignForm onSubmit={logintest}>
+        <SignForm onSubmit={login}>
           <h1>Login</h1>
           <hr></hr>
           <label htmlFor="email">

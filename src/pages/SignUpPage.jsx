@@ -7,12 +7,22 @@ import { ThreeDots } from "react-loader-spinner";
 import Header from "../components/Header.jsx";
 import Main from "../assets/Main.jsx";
 import { Helmet } from "react-helmet-async";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function SignUpPage() {
   //const { login } = useContext(AuthContext);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [dados, setDados] = useState({ email: "", password: "", name: "" });
+  const dispatch = useDispatch();
+  let filter = useSelector(state => {
+    console.log('State: ', state);
+    return state.userReducer.currentUser;
+  });
+
+  /*if(filter){
+    navigate("/membership")
+  }*/
 
   function alterardados(e) {
     let newobj = { ...dados };
@@ -24,10 +34,9 @@ export default function SignUpPage() {
     setLoading(true);
     e.preventDefault();
     axios
-      .post("https://localhost:5000/sign-up", dados)
+      .post("http://localhost:4000/auth/sign-up", dados)
       .then((res) => {
-        login(res.data);
-        navigate("/login");
+        navigate("/sign-in");
       })
       .catch((err) => {
         alert("Ocorreu um erro, tente novamente");

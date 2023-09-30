@@ -8,7 +8,12 @@ const userReducer = (state = initialState, action) => {
  }
  
  const initialState = {
-   currentUser: null
+   currentUser: {
+    name: "",
+    email: "",
+    birthday: "",
+    token: ""
+   }
  }
 
  export default userReducer

@@ -6,10 +6,23 @@ import { Helmet } from "react-helmet-async";
 import { CreditCard } from "../components/CreditCard";
 import { Address } from "../components/Address";
 import { Order } from "../components/Order";
+import { useDispatch, useSelector } from "react-redux";
+import { NewCardForm } from "../components/NewCardForm";
 
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("creditcards");
+  const filter = useSelector(state => state.userReducer.currentUser)
+  const dispatch = useDispatch();
+  const [openedform, setOpenedForm] = useState(null)
 
+  function openForm(e){
+    if(openedform){
+      setOpenedForm(null);
+    }
+    else{
+      setOpenedForm(e.target.textContent)
+    }
+  }
   
 
   return (
@@ -40,26 +53,28 @@ export function AccountPage() {
             {currentabout === "accountinformation" ? (
               <>
                 <h1>
-                  Profile <button>Edit Profile</button>
+                  Profile <button onClick={openForm}>Edit Profile</button>
                 </h1>
                 <hr></hr>
                 <h2>Email</h2>
-                <h3>email@email.com</h3>
+                <h3>{filter.email}</h3>
                 <h2>Name</h2>
-                <h3>John Doe</h3>
+                <h3>{filter.name}</h3>
                 <h2>Birthday</h2>
-                <h3>01/01/1990</h3>
+                <h3>{filter.birthday}</h3>
               </>
             ) : currentabout === "creditcards" ? (
               <>
-                <h1>Credit Cards</h1>
+                <h1>Credit Cards  <button onClick={openForm}>New card</button></h1>
                 <hr></hr>
+                {openedform === "New card" ? <NewCardForm setOpenedForm={setOpenedForm} /> : <>
                 <CreditCard />
                 <CreditCard />
+                </>}
               </>
             ) : ( currentabout === "addressbook" ?
               <>
-                <h1>Addresses</h1>
+                <h1>Addresses  <button>New address</button></h1>
                 <hr></hr>
                 <Address />
                 <Address />
