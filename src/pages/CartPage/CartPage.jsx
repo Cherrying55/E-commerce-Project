@@ -4,8 +4,22 @@ import { Summary } from "./components/Summary";
 import { CartItem } from "./components/CartItem";
 import { Breadcrumb } from "../../components/Breadcrumb";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export default function CartPage() {
+  let filter = useSelector(state => {
+    return state.userReducer.currentUser;
+  });
+  const navigate = useNavigate()
+
+  useEffect(() => {if(!filter.token){
+    navigate("/sign-in")
+  
+  }}, [navigate])
+  
+
   return (
     <>
     <Helmet>

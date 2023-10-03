@@ -1,19 +1,26 @@
 import Header from "../components/Header";
 import { Breadcrumb } from "react-bootstrap";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { CreditCard } from "../components/CreditCard";
 import { Address } from "../components/Address";
 import { Order } from "../components/Order";
 import { useDispatch, useSelector } from "react-redux";
 import { NewCardForm } from "../components/NewCardForm";
-
+import { useNavigate } from "react-router-dom";
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("creditcards");
   const filter = useSelector(state => state.userReducer.currentUser)
   const dispatch = useDispatch();
   const [openedform, setOpenedForm] = useState(null)
+  const navigate = useNavigate()
+
+  useEffect(() => {if(!filter.token){
+    navigate("/sign-in")
+  
+  }}, [navigate])
+  
 
   function openForm(e){
     if(openedform){

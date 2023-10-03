@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 import SignForm from "../assets/SignForm.jsx";
 import styled from "styled-components";
 import { ThreeDots } from "react-loader-spinner";
@@ -19,6 +19,10 @@ export default function LoginPage() {
     return state.userReducer.currentUser;
   });
 
+  useEffect(() => {if(filter.token){
+    navigate("/membership")
+  }}, [])
+
   function alterardados(e) {
     let newobj = { ...dados };
     newobj[e.target.name] = e.target.value;
@@ -36,8 +40,8 @@ export default function LoginPage() {
     axios
       .post("http://localhost:4000/auth/sign-in", dados)
       .then((res) => {
-        let token = res.data;
-        dispatch(loginaction({currentUser: token}))
+        let token = res.data.token;
+        dispatch(loginaction({currentUser: {email: res.data.email, name: res.data.name, token, birthday: res.data.birthday}}))
         console.log(filter);
         navigate("/");
       })

@@ -3,9 +3,15 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import BestSelling from "../components/BestSelling";
 import { Helmet } from "react-helmet-async";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const [bestselling, setBestSelling] = useState([]);
+  let filter = useSelector(state => {
+    return state.userReducer.currentUser;
+  });
+  const navigate = useNavigate()
 
   return (
     <>
