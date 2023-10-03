@@ -53,6 +53,7 @@ export function EditProfileForm(props){
                 />
             </label>
             <button type="submit">Change Password</button>
+            <button onClick={() => {setOpenedForm(null)}}>Cancel</button>
         </SignForm>
     )
 }
