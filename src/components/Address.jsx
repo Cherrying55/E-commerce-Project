@@ -1,33 +1,42 @@
-
+import { useState, useEffect} from "react"
 import styled from "styled-components"
-export function Address(){
+import { AddressEditComponent } from "./AddressEditComponent"
+
+export function Address(props){
+   const [openedit, setOpenEdit] = useState(false)
+   const [formdata, setFormData] = useState({addresstype: "", country: "", state: "", city: "", zipcode: "", street: "", number: "", complemento: ""})
+   useEffect(() => {
+    console.log("Address type" + props.adress?.addresstype)
+   }, [props])
     return(
-        <AddressContainer>
+        <AddressContainer openedit={openedit}>
             <div>
                 <h2>Type</h2>
-                <h3>Home</h3>
+                <AddressEditComponent v={props.address?.addresstype} openedit={openedit} />
                 <h2>Country</h2>
-                <h3>Canada</h3>
+                <AddressEditComponent v={props.address?.country} openedit={openedit} />
             </div>
             <div>
             <h2>State</h2>
-                <h3>Ontario</h3>
+            <AddressEditComponent v={props.address?.state} openedit={openedit} />
                 <h2>City</h2>
-                <h3>Toronto</h3>
+                <AddressEditComponent v={props.address?.city} openedit={openedit} />
             </div>
             <div>
                 <h2>Zip code</h2>
-                <h3>1003103</h3>
+                <AddressEditComponent v={props.address?.zipcode} openedit={openedit} />
                 <h2>Street</h2>
-                <h3>Random street</h3>
+                <AddressEditComponent v={props.address?.street} openedit={openedit} />
                 <h2>Number</h2>
-                <h3>103</h3>
+                <AddressEditComponent v={props.address?.number} openedit={openedit} />
             </div>
             <div>
                 <h2>Complement</h2>
-                <h3>Room 404</h3>
-                <button>Edit</button>
-                <button>Delete</button>
+                <AddressEditComponent v={props.address?.complemento} openedit={openedit} />
+                {openedit ? <><button type="submit">Submit</button>
+                <button onClick={() => {setOpenEdit(false)}}>Cancel</button></> : <>
+                <button onClick={() => {setOpenEdit(true)}}>Edit</button>
+                <button>Delete</button></>}
                 </div>
         </AddressContainer>
     )
@@ -39,7 +48,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 padding: 20px;
-height: 280px;
+height: 300px;
 margin-bottom: 20px;
 border-radius: 3px;
 
@@ -52,10 +61,34 @@ div{
         margin-bottom: 12px;
       }
     
-      h3 {
+    input, h3 {
         font-size: 16px;
         margin-bottom: 20px;
+        display: flex;
+        gap: 5px;
       }
+
+    ion-icon{
+        font-size: 20px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input{
+        width: ${props => props.openedit ? "50%" : "fit-content"};
+        height: 30px;
+        padding: 3px;
+        color: black;
+    }
+}
+
+div div{
+    width: 100%;
+        display: flex;
+        gap: 4px;
+        flex-direction: row;
 }
 div button {
     display: flex;

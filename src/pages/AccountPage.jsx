@@ -11,17 +11,36 @@ import { NewCardForm } from "../components/NewCardForm";
 import { useNavigate } from "react-router-dom";
 import { EditProfileForm } from "../components/EditProfileForm";
 import NewAddressForm from "../components/NewAddressForm";
+import axios from "axios";
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("creditcards");
   const filter = useSelector(state => state.userReducer.currentUser)
   const dispatch = useDispatch();
   const [openedform, setOpenedForm] = useState(null)
   const navigate = useNavigate()
+  const [addresses, setAddresses] = useState([]);
 
   useEffect(() => {if(!filter.token){
     navigate("/sign-in")
   
   }}, [navigate])
+  
+
+  useEffect(() => {
+    const config = {headers:{
+      "Authorization": `Bearer ${filter.token}`
+  }}
+    const promise = axios.get(`http://localhost:4000/auth/billing`, config)
+        promise.then(
+            (res) => {
+              console.log(res.data)
+                setAddresses(res.data)
+            }
+        )
+        promise.catch(
+            (e) => {console.log(e)}
+        )
+  }, [])
   
 
   function openForm(e){
@@ -88,8 +107,9 @@ export function AccountPage() {
                 <h1>Addresses  <button onClick={openForm}>New address</button></h1>
                 <hr></hr>
                 {openedform === "New address" ? <NewAddressForm setOpenedForm={setOpenedForm} /> : <>
-                <Address />
-                <Address />
+                {addresses.map(
+                  (a) => {console.log(a); return <Address address={a} />}
+                )}
                 </>}
               </>
             : <>

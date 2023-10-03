@@ -63,6 +63,7 @@ export default function NewAddressForm(props){
             </label>
             </div>
             <button type="submit">Create address</button>
+            <button onClick={() => {setOpenedForm(null)}}>Cancel</button>
             </section>
         </Wrapper>
     )
@@ -110,13 +111,19 @@ const Wrapper = styled.form`
     background: #e6e2e1;
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 30px;
     width: 100%;
     color: black;
     border: none;
     font-weight: bold;
     justify-content: center;
     font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button:nth-of-type(2){
+    background-color: black;
+    color: white;
   }
 
   div:nth-child(1){

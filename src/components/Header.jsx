@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
       <Menu />
-      <Logo>STARR</Logo>
+      <Logo onClick={() => navigate("/")}>STARR</Logo>
       <div>
         <ion-icon
           name="cart-outline"
@@ -18,11 +18,7 @@ export default function Header() {
         <ion-icon
           name="person"
           onClick={() => {
-            if (auth.token) {
-              navigate("/membership");
-            } else {
-              navigate("/login");
-            }
+            navigate("/membership")
           }}
         ></ion-icon>
         <ion-icon name="heart" onClick={() => navigate("/wishlist")}></ion-icon>
