@@ -6,6 +6,9 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 <img src="https://i.imgur.com/LjbFnEp.png" />
 
 <hr>
+Back-end: https://github.com/GustavoFLacerda/starr-backend
+
+<hr>
 
 <h1> Instructions </h1>
 
@@ -91,7 +94,6 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 <ul>
   <li>Color and size selection in the product page</li>
   <li>Service worker for cached content</li>
-  <li>Redux</li>
   <li>NextJS sitemap implementation</li>
 </ul>
 
