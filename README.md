@@ -16,6 +16,18 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 
 <hr>
 
+<h1> Docker Instructions </h1>
+
+<ul>
+  <li>docker pull node:alpine</li>
+  <li>docker pull nginx:alpine</li>
+  <li>docker pull cherrying/starrfront OR docker build -t cherrying/starfront .</li>
+  <li>docker run -dit -p 8080:80 --name starrfront starrfront</li>
+  <li>Access localhost:8080</li>
+</ul>
+
+<hr>
+
 <h1>Technologies used</h1>
 <ul>
   <li>ReactJS</li>
@@ -23,6 +35,8 @@ Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
   <li>Create React App</li>
   <li>React Helmet</li>
   <li>React Router</li>
+  <li>Redux.js</li>
+  <li>Docker</li>
 </ul>
 
 <hr>
