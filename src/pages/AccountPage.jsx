@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NewCardForm } from "../components/NewCardForm";
 import { useNavigate } from "react-router-dom";
 import { EditProfileForm } from "../components/EditProfileForm";
+import NewAddressForm from "../components/NewAddressForm";
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("creditcards");
   const filter = useSelector(state => state.userReducer.currentUser)
@@ -84,10 +85,12 @@ export function AccountPage() {
               </>
             ) : ( currentabout === "addressbook" ?
               <>
-                <h1>Addresses  <button>New address</button></h1>
+                <h1>Addresses  <button onClick={openForm}>New address</button></h1>
                 <hr></hr>
+                {openedform === "New address" ? <NewAddressForm setOpenedForm={setOpenedForm} /> : <>
                 <Address />
                 <Address />
+                </>}
               </>
             : <>
             <h1>Purchase History</h1>
