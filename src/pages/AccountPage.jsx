@@ -9,6 +9,7 @@ import { Order } from "../components/Order";
 import { useDispatch, useSelector } from "react-redux";
 import { NewCardForm } from "../components/NewCardForm";
 import { useNavigate } from "react-router-dom";
+import { EditProfileForm } from "../components/EditProfileForm";
 export function AccountPage() {
   const [currentabout, setCurrentAbout] = useState("creditcards");
   const filter = useSelector(state => state.userReducer.currentUser)
@@ -60,15 +61,17 @@ export function AccountPage() {
             {currentabout === "accountinformation" ? (
               <>
                 <h1>
-                  Profile <button onClick={openForm}>Edit Profile</button>
+                  Profile <button onClick={openForm}>Edit Password</button>
                 </h1>
                 <hr></hr>
+                {openedform === "Edit Password" ? <EditProfileForm setOpenedForm={setOpenedForm} /> : <>
                 <h2>Email</h2>
                 <h3>{filter.email}</h3>
                 <h2>Name</h2>
                 <h3>{filter.name}</h3>
                 <h2>Birthday</h2>
                 <h3>{filter.birthday}</h3>
+                </>}
               </>
             ) : currentabout === "creditcards" ? (
               <>
