@@ -3,7 +3,7 @@
 Fully functional clothing store application with a shopping bag, a wishing list and account information. <br>
 Inspirations: Shein, Sacai, Undercover, Yohji Yamamoto, Aliexpress, Antix
 
-<img src="https://i.imgur.com/LjbFnEp.png" />
+<img src="https://i.imgur.com/esD2m8p.png" />
 
 <hr>
 Back-end: https://github.com/GustavoFLacerda/starr-backend
